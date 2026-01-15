@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Completed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #4CAF50, #2e7d32);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #4CAF50;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .checkmark::after {
+            content: "";
+            position: absolute;
+            left: 22px;
+            top: 38px;
+            width: 20px;
+            height: 40px;
+            border: solid #fff;
+            border-width: 0 6px 6px 0;
+            transform: rotate(45deg);
+            animation: draw 0.6s ease-in-out;
+        }
+
+        @keyframes draw {
+            from {
+                height: 0;
+                width: 0;
+            }
+            to {
+                height: 40px;
+                width: 20px;
+            }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .order-details {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .order-details div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .home-btn {
+            background: #4CAF50;
+            color: #fff;
+        }
+
+        .print-btn {
+            background: #eeeeee;
+            color: #333;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HTML ===== -->
+    <div class="container">
+        <div class="checkmark"></div>
+
+        <h1>Order Completed!</h1>
+        <p>Thank you for your purchase. Your order has been successfully placed.</p>
+
+        <div class="order-details">
+            <div>
+                <span>Order ID:</span>
+                <strong id="orderId">#----</strong>
+            </div>
+            <div>
+                <span>Date:</span>
+                <strong id="orderDate">--</strong>
+            </div>
+            <div>
+                <span>Total Amount:</span>
+                <strong id="orderAmount">$0.00</strong>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="home-btn" onclick="goHome()">Go Home</button>
+            <button class="print-btn" onclick="printPage()">Print</button>
+        </div>
+    </div>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        // Generate sample order data
+        const orderId = Math.floor(Math.random() * 900000) + 100000;
+        const date = new Date().toLocaleDateString();
+        const amount = "$" + (Math.random() * 200 + 20).toFixed(2);
+
+        document.getElementById("orderId").textContent = "#" + orderId;
+        document.getElementById("orderDate").textContent = date;
+        document.getElementById("orderAmount").textContent = amount;
+
+        function goHome() {
+            alert("Redirect to home page");
+            // window.location.href = "index.html";
+        }
+
+        function printPage() {
+            window.print();
+        }
+    </script>
+
+</body>
+</html>

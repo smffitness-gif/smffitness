@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+
+  <!-- Navbar (static include or copy markup) -->
+  <nav class="navbar">Navbar</nav>
+
+  <label for="menu-toggle" class="menu-icon">☰</label>
+  <input type="checkbox" id="menu-toggle">
+
+  <div class="menu">
+    <a href="ORG smf file.html">Home</a>
+    <a href="contact.html">About</a>
+    <a href="#">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <section class="contact page-section" id="contact">
+    <div class="contact-container">
+
+      <div class="section-header animate">
+        <p class="section-tag">Get In Touch</p>
+        <h2>Start Your Transformation</h2>
+        <p>Ready to become the best version of yourself? Let's talk.</p>
+      </div>
+
+      <form class="contact-form animate" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="john@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" id="phone" placeholder="+1 (555) 000-0000" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Tell us about your fitness goals..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+
+        <p id="statusMessage" class="form-status"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="contact.js"></script>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+    }
+
+    /* Section */
+    .page-section {
+      padding: 40px 20px;
+    }
+
+    .contact-container {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Header */
+    .section-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+      margin: 10px 0;
+    }
+
+    /* Form */
+    .contact-form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 5px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    input,
+    textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    /* Button */
+    .submit-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #555;
+    }
+
+    /* Status text */
+    .form-status {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Mobile */
+    @media (max-width: 60px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+
+    /* Hide checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Hamburger icon */
+    .menu-icon {
+      font-size: 30px;
+      padding: 15px;
+      cursor: pointer;
+      background: #333;
+      color: white;
+      display: inline-block;
+      padding-bottom: 2px;
+    }
+
+    /* Menu */
+    .menu {
+      display: none;
+      background: #444;
+      width: 100px;
+    }
+
+    .menu a {
+      display: block;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #555;
+    }
+
+
+    /* Show menu when clicked */
+    #menu-toggle:checked+.menu {
+      display: block;
+    }
+  </style>
+</body>
+
+</html>
