@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMF Fitness & Supplements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/smf logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h1>SMF FITNESS & SUPPLEMENTS</h1>
+
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <input type="checkbox" id="menu-toggle">
+
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#products">Supplements</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="home">
+    <img src="img/smf logo.jpeg" alt="SMF Logo">
+</section>
+
+<hr>
+
+<!-- SOCIAL -->
+<section class="social">
+    <h2>Social Media</h2>
+
+    <a href="https://www.instagram.com/smf_501" target="_blank">
+        <img src="img/Social=Instagram,Style=Original.svg"> Instagram
+    </a>
+
+    <a href="https://www.instagram.com/smf_501" target="_blank">
+        <img src="img/Social=Facebook,Style=Original.svg"> Facebook
+    </a>
+
+    <a href="https://www.instagram.com/smf_501" target="_blank">
+        <img src="img/Social=WhatsApp,Style=Original.svg"> WhatsApp
+    </a>
+</section>
+
+<hr>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+    <h2>Supplements</h2>
+
+    <div class="product-grid">
+
+        <!-- PRODUCT CARD -->
+        <div class="product-card">
+            <img src="img/creatin/711l1FkCLaL._AC_UL480_FMwebp_QL65_.webp">
+            <h3>Creatine Monohydrate</h3>
+            <p class="price">₹1000</p>
+            <button onclick="orderNow('Creatine')">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/whey/OIP.jpg">
+            <h3>Whey Protein</h3>
+            <p class="price">₹1499</p>
+            <button onclick="orderNow('Whey Protein')">Order Now</button>
+        </div>
+
+    </div>
+</section>
+
+<hr>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>DM us on Instagram or WhatsApp to place your order.</p>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>

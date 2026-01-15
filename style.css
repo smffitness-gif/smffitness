@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    text-align: center;
+    padding: 15px;
+}
+
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+#menu-toggle:checked + .menu {
+    display: block;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* HOME */
+.home {
+    text-align: center;
+}
+
+.home img {
+    width: 200px;
+}
+
+/* SOCIAL */
+.social {
+    text-align: center;
+}
+
+.social a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.social img {
+    width: 20px;
+    vertical-align: middle;
+}
+
+/* PRODUCTS */
+.products {
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    border: 1px solid #444;
+    padding: 15px;
+    width: 250px;
+}
+
+.product-card img {
+    width: 100%;
+}
+
+.price {
+    color: #00ff99;
+    font-size: 20px;
+}
+
+button {
+    padding: 10px;
+    background: orange;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: blue;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding: 20px;
+}
